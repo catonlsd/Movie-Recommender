@@ -1,88 +1,40 @@
-# 🎬 Movie Recommendation System
+# 🎬 AI-Powered Movie Recommendation System
 
-A full-stack AI movie recommendation platform that uses semantic embeddings and cosine similarity to recommend movies based on contextual understanding instead of simple keyword matching.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Netlify](https://img.shields.io/badge/Frontend-Netlify-black)
+![Render](https://img.shields.io/badge/Backend-Render-purple)
+![AI](https://img.shields.io/badge/AI-SentenceTransformers-red)
 
-The system analyzes movie overview, genres, cast, keywords, and director information to generate highly relevant recommendations using Sentence Transformers.
+A full-stack AI-powered movie recommendation platform that uses semantic embeddings and cosine similarity to recommend movies based on contextual understanding instead of traditional keyword matching.
 
----
-
-# 🚀 Features
-
-✅ Semantic AI-based movie recommendations  
-✅ Sentence Transformer embeddings  
-✅ Cosine similarity recommendation engine  
-✅ FastAPI backend  
-✅ Responsive modern frontend  
-✅ Movie posters using TMDB API  
-✅ Autocomplete search suggestions  
-✅ Genre-based filtering  
-✅ Fuzzy movie search matching  
-✅ Similarity score for recommendations  
-✅ REST API architecture  
+The system analyzes movie overviews, genres, cast, keywords, and directors to generate highly relevant recommendations using Sentence Transformers and NLP-based semantic similarity.
 
 ---
 
-# 🧠 How It Works
+# 🔗 Live Demo
 
-1. Movie metadata is cleaned and processed.
-2. Important features are combined into a single `tags` column:
-   - Overview
-   - Genres
-   - Keywords
-   - Cast
-   - Director
-3. Sentence Transformer generates semantic embeddings.
-4. Cosine similarity compares movie vectors.
-5. FastAPI serves recommendations through API endpoints.
-6. Frontend displays results with posters and filters.
+### Frontend
+https://YOUR_NETLIFY_URL.netlify.app
+
+### Backend API
+https://movie-recommender-api-wawc.onrender.com
 
 ---
 
-# 🛠️ Tech Stack
+# ✨ Key Features
 
-## Backend
-- Python
-- FastAPI
-- Pandas
-- Scikit-learn
-- Sentence Transformers
-- Requests
-
-## Frontend
-- HTML
-- CSS
-- JavaScript
-
-## APIs
-- TMDB API
-
----
-
-# 📂 Project Structure
-
-```text
-movie-recommender/
-│
-├── backend/
-│   ├── main.py
-│   ├── movies.pkl
-│   ├── requirements.txt
-│   ├── similarity.pkl
-│
-├── frontend/
-│   ├── index.html
-│   ├── script.js
-│   ├── style.css
-│
-├── notebook/
-│   ├── movie_recommender_final.ipynb
-│
-├── screenshots/
-│   ├── home.png
-│   ├── results.png
-│
-├── README.md
-```
+- Semantic AI movie recommendations
+- Sentence Transformer embeddings
+- Cosine similarity recommendation engine
+- FastAPI REST API backend
+- Responsive modern frontend UI
+- Movie poster integration using TMDB API
+- Autocomplete movie search
+- Genre-based filtering
+- Fuzzy movie title matching
+- Similarity scoring for recommendations
+- Full-stack production deployment
 
 ---
 
@@ -100,18 +52,91 @@ movie-recommender/
 
 ---
 
+# 🧠 How It Works
+
+1. Movie metadata is cleaned and preprocessed.
+2. Important movie attributes are combined into a single `tags` column:
+   - Overview
+   - Genres
+   - Keywords
+   - Cast
+   - Director
+3. Sentence Transformer generates semantic embeddings for each movie.
+4. Cosine similarity compares embedding vectors.
+5. FastAPI serves recommendation results through REST APIs.
+6. Frontend fetches and displays recommendations dynamically with posters and filters.
+
+---
+
+# 🛠️ Tech Stack
+
+## Backend
+- Python
+- FastAPI
+- Pandas
+- NumPy
+- Scikit-learn
+- Requests
+- Sentence Transformers
+
+## Frontend
+- HTML
+- CSS
+- JavaScript
+
+## APIs
+- TMDB API
+
+## Deployment
+- Render (Backend)
+- Netlify (Frontend)
+
+---
+
+# 📂 Project Structure
+
+```text
+movie-recommender/
+│
+├── backend/
+│   ├── main.py
+│   ├── movies.pkl
+│   ├── similarity.pkl
+│   ├── requirements.txt
+│   ├── .env.example
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│
+├── notebook/
+│   ├── movie_recommender_final.ipynb
+│
+├── screenshots/
+│   ├── home.png
+│   ├── results.png
+│
+├── .gitignore
+├── README.md
+```
+
+---
+
 # ⚙️ Installation & Setup
 
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/movie-recommender.git
+git clone https://github.com/YOUR_USERNAME/movie-recommender.git
 cd movie-recommender
 ```
 
 ---
 
 ## 2️⃣ Backend Setup
+
+Navigate to backend directory:
 
 ```bash
 cd backend
@@ -139,13 +164,19 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run backend:
+Create `.env` file:
+
+```env
+TMDB_API_KEY=YOUR_TMDB_API_KEY
+```
+
+Run backend server:
 
 ```bash
 python -m uvicorn main:app --reload
 ```
 
-Backend runs on:
+Backend runs at:
 
 ```text
 http://127.0.0.1:8000
@@ -169,7 +200,7 @@ using **Live Server** in VS Code.
 
 ## GET `/movies`
 
-Autocomplete movie suggestions.
+Returns autocomplete movie suggestions.
 
 ### Example
 
@@ -181,7 +212,7 @@ GET /movies?q=ava
 
 ## GET `/genres`
 
-Returns all available genres.
+Returns all available movie genres.
 
 ---
 
@@ -211,12 +242,6 @@ Returns semantic movie recommendations.
 }
 ```
 
-## Live Demo
-
-Frontend: https://YOUR_NETLIFY_URL.netlify.app
-
-Backend API: https://movie-recommender-api-wawc.onrender.com
-
 ---
 
 # 🧠 AI Concepts Used
@@ -239,10 +264,16 @@ Backend API: https://movie-recommender-api-wawc.onrender.com
 - User ratings and reviews
 - Recommendation history
 - Advanced filtering
-- Deployment using Docker
+- Docker containerization
+
+---
+
+# 📄 Resume Description
+
+Built a full-stack AI-powered movie recommendation system using Sentence Transformers, FastAPI, cosine similarity, and TMDB metadata. Implemented semantic movie similarity, autocomplete, genre filtering, fuzzy search, movie poster integration, and a responsive frontend interface. Deployed the application using Render and Netlify with secure environment variable management.
 
 ---
 
 # 👨‍💻 Author
 
-Mokshit
+**Mokshit**
