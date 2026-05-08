@@ -1,6 +1,8 @@
-const API_URL = "http://127.0.0.1:8000/recommend";
-const MOVIES_URL = "http://127.0.0.1:8000/movies";
-const GENRES_URL = "http://127.0.0.1:8000/genres";
+const BASE_URL = "https://movie-recommender-api-wawc.onrender.com";
+
+const API_URL = `${BASE_URL}/recommend`;
+const MOVIES_URL = `${BASE_URL}/movies`;
+const GENRES_URL = `${BASE_URL}/genres`;
 
 const movieInput = document.getElementById("movieInput");
 const suggestions = document.getElementById("suggestions");
