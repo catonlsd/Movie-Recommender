@@ -15,10 +15,10 @@ The system analyzes movie overviews, genres, cast, keywords, and directors to ge
 # 🔗 Live Demo
 
 ### Frontend
-https://YOUR_NETLIFY_URL.netlify.app
+https://ai-movie-recommender-system.netlify.app
 
 ### Backend API
-https://movie-recommender-api-wawc.onrender.com
+https://movie-recommender-api-wawc.onrender.com/docs
 
 ---
 
